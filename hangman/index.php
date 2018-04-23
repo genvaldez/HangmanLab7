@@ -19,6 +19,8 @@
             </header>
             
             <div id="word"></div>
+            <button id="hintBtn">Hint?</button>
+            <div id="hint"></div>
             <div id="letters">
                 <!--<input type="text" id="letterBox"> -->
                <!-- <button id="letterBtn">Submit</button> -->

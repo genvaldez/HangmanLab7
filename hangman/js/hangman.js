@@ -14,6 +14,12 @@
         checkLetter($(this).attr("id"));
         disableButton($(this));
     });
+    $("#hintBtn").on("click",function() { 
+        $("#hint").append("<span class='hint'>Hint: " + selectedHint + "</span>"); 
+        remainingGuesses-=1;
+        updateMan();
+        $("#hint_btn").hide();
+    });
     
     //Listeners
     window.onload=startGame();
@@ -50,7 +56,7 @@
             $("#word").append(board[i] +" ");
         } 
         $("#word").append("<br/>");
-        $("#word").append("<span class='hint'>Hint: "+ selectedHint+"</span>");
+       // $("#word").append("<span class='hint'>Hint: "+ selectedHint+"</span>");
     }
     
     function checkLetter(letter){
@@ -112,7 +118,7 @@
         board = [];
         remainingGuesses = 6;
         $("#letters").show();
-        $("#hint_btn").show();
+        $("#hintBtn").show();
         $("#hint").show();
         $("#man").show();
         startGame();
